@@ -1,11 +1,22 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
-import MainNav from '../components/MainNav.astro';
+import Header from '../layouts/Header.astro';
+import Footer from '../layouts/Footer.astro';
+import { Content as AboutMe } from '../components/aboutMe.md';
+import BlockQuote from "../components/BlockQuote.astro";
 ---
 
 <SiteLayout>
-    <MainNav />
-    <div class="container px-4 mx-auto text-sky-400">
-        Hello World!
-    </div>
+    <Header />
+    <main class="max-w-[65ch] w-full px-5 mx-auto">
+        <div class="mb-3 text-zinc-200">Greetings! I'm Austin,</div>
+        <h1 class="text-6xl font-bold bg-linear-to-r from-amber-400 to-rose-300 text-transparent bg-clip-text mb-8">
+            Frontend Developer
+        </h1>
+        <div class="md-content">
+            <AboutMe />
+        </div>
+        <BlockQuote text="Somewhere, something incredible is waiting to be known." author="Carl Sagan" />
+    </main>
+    <Footer />
 </SiteLayout>

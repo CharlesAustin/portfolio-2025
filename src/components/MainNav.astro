@@ -1,4 +1,24 @@
-<nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
+---
+import Image from "astro/components/Image.astro";
+import githubIcon from "../assets/github-white.svg";
+import siteLogo from "../assets/A-logo.svg";
+import linkedinIcon from "../assets/linkedin-logo.svg";
+---
+
+<nav class="flex justify-between">
+    <menu class="flex gap-4 items-center">
+        <li>
+            <a href="/" aria-label="Go to homepage">
+                <Image class="fill-white" src={siteLogo} width="48" alt="Stylized letter A" />
+            </a>
+        </li>
+    </menu>
+    <div class="flex">
+        <a class="p-2.5 after:content-[''] after:block after:mt-1 after:w-6 after:h-1 hover:after:bg-rose-400 after:transition-all after:duration-200" href="https://github.com/CharlesAustin">
+            <Image src={githubIcon} width="24" alt="Link to Austin's GitHub" />
+        </a>
+        <a class="p-2.5 after:content-[''] after:block after:mt-1 after:w-6 after:h-1 hover:after:bg-rose-400 after:transition-all after:duration-200" href="https://www.linkedin.com/in/austin-atkinson-0687978a">
+            <Image src={linkedinIcon} width="24" alt="Link to Austin's LinkedIn" />
+        </a>
+    </div>
 </nav>

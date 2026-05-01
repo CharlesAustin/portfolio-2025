@@ -1,1 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --font-plex-sans: "IBM Plex Sans", sans-serif;
+}
+
+.md-content {
+    @apply text-zinc-200;
+
+    p {
+        @apply mb-4;
+    }
+
+    a {
+        @apply text-sky-300 hover:underline hover:decoration-rose-400 hover:decoration-4;
+    }
+}

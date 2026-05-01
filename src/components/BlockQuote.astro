@@ -1,0 +1,17 @@
+---
+interface Props {
+    text: string;
+    author?: string;
+}
+
+const {text, author} = Astro.props;
+---
+<figure class="flex flex-col items-center border-2 border-zinc-700 rounded-sm text-zinc-200 py-6 my-10">
+	<blockquote>
+		<p class="mb-2 px-6 text-center">{text}</p>
+	</blockquote>
+    {author &&
+			<figcaption>
+				&mdash; <cite>{author}</cite>
+			</figcaption>}
+</figure>
